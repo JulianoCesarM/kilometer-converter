@@ -1,7 +1,7 @@
 body {
   font-family: "Roboto Mono", monospace;
   text-align: center;
-  background-image: url("https://caelum-online-public.s3.amazonaws.com/assets-imersaodev/Background.png");
+  background-image: url("/assets/img/galaxy.jpg");
   background-color: #000000;
   background-size: cover;
   background-position: center top;
@@ -78,4 +78,10 @@ button {
   color: black;
   padding: 10px;
   text-align: left;
+}
+#distanceLightYear {
+  width: 90px;
+}
+#distanceName {
+  width: 200px;
 }
