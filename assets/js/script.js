@@ -1,11 +1,22 @@
-function kilometerConverter() {
-  const distanceQuilometers = document.querySelector("#valueDistance")
-  const valueAnosLuz = 0.0000000000001057
-  const calculoDistancia = distanceQuilometers.value * valueAnosLuz
+function converterDistance() {
+  const distanceLightYear = document.querySelector("#distanceLightYear").value
+  const distanceName = document.querySelector("#distanceName").value
+  let calculo // 1 ano-luz 9,46 trilhoes de Km
 
   const resp = document.querySelector("p#resp")
-  resp.classList.add("resp")
 
-  msg = `${distanceQuilometers.value} quilometros está a ${calculoDistancia} anos-luz de distancia`
-  resp.innerText = msg
+  if (distanceName == "quilometros") {
+    calculo = 9.461e12
+    const distanceQuilometers = distanceLightYear * calculo
+    msg = `${distanceLightYear} anos-luz está a ${distanceQuilometers} quilometros de distancia`
+    resp.classList.add("resp")
+    return (resp.innerText = msg)
+  }
+  if (distanceName == "metros") {
+    calculo = 9.461e15
+    const distanceMeters = distanceLightYear * calculo
+    msg = `${distanceLightYear} anos-luz está a ${distanceMeters} quilometros de distancia`
+    resp.classList.add("resp")
+    return (resp.innerText = msg)
+  }
 }

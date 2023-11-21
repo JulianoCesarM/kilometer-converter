@@ -4,11 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/assets/css/style.css" />
-    <title>kilometer converter</title>
+    <title>Anos-luz converter</title>
   </head>
   <body>
     <div class="container">
-      <h1 class="page-title">kilometer converter</h1>
+      <h1 class="page-title">Anos-luz converter</h1>
       <img
         src="https://www.alura.com.br/assets/img/imersoes/dev-2021/logo-imersao-aluraflix.svg"
         class="page-logo"
@@ -21,16 +21,18 @@
         alt=""
         class="alura-logo"
       />
-      <img
-        src="https://caelum-online-public.s3.amazonaws.com/assets-imersaodev/Convers%C3%A3o+1.png"
-      />
     </a>
     <div class="content">
       <div>
-        <label for="distance">Quilômetros para anos-luz</label>
-        <input type="number" id="valueDistance" name="distance" />
+        <input type="number" id="distanceLightYear" name="distance" />
+        <label for="distance">Anos-luz para</label>
+        <input list="myDatalist" name="myInput" id="distanceName" />
+        <datalist id="myDatalist">
+          <option value="quilometros">Quilômetro (km)</option>
+          <option value="metros">Metros (m)</option>
+        </datalist>
       </div>
-      <button onclick="kilometerConverter()">Converter</button>
+      <button onclick="converterDistance()">Converter</button>
     </div>
     <p id="resp" class=""></p>
     <script src="/assets/js/script.js"></script>
